@@ -43,8 +43,12 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'pmsorhaindo/syntastic-local-eslint.vim'
 " ファイルツリー
 NeoBundle 'scrooloose/nerdtree'
-" colorscheme
-NeoBundle 'tyrannicaltoucan/vim-deep-space'
+" カラースキーム
+NeoBundle 'gosukiwi/vim-atom-dark'
+" NeoBundle 'tyrannicaltoucan/vim-deep-space'
+" NeoBundle 'Shougo/unite.vim'
+" NeoBundle 'ujihisa/unite-colorscheme'
+" NeoBundle 'flazz/vim-colorschemes'
 
 " vimのlua機能が使える時だけ以下のVimプラグインをインストールする
 if has('lua')
@@ -70,8 +74,7 @@ NeoBundleCheck
 set t_Co=256 " iTerm2など既に256色環境なら無くても良い
 syntax enable " 構文に色を付ける
 set background=dark
-set termguicolors
-colorscheme deep-space
+colorscheme atom-dark-256
 
 "----------------------------------------------------------
 " 文字
@@ -136,6 +139,24 @@ set backspace=indent,eol,start
 " ファイルツリーのショートカット
 "----------------------------------------------------------
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+"----------------------------------------------------------
+" 分割ウィンドウのショートカット
+"----------------------------------------------------------
+" 移動
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+" サイズ変更
+nmap - <C-w>-
+nmap + <C-w>+
+
+"----------------------------------------------------------
+" タブの切り替え
+"----------------------------------------------------------
+nmap <S-Tab> :tabprev<Return>
+nmap <Tab> :tabnext<Return>
 
 "----------------------------------------------------------
 " カッコ・タグの対応
