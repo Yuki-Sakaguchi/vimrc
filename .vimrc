@@ -143,11 +143,21 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 "----------------------------------------------------------
 " 分割ウィンドウのショートカット
 "----------------------------------------------------------
+" split
+nmap ss :split<Return><C-w>w
+nmap sv :vsplit<Return><C-w>w
+nmap so <C-w>o
+
 " 移動
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
+nmap s<left> <C-w>h
+nmap s<down> <C-w>j
+nmap s<up> <C-w>k
+nmap s<right> <C-w>l
+nmap sh <C-w>h
+nmap sj <C-w>j
+nmap sk <C-w>k
+nmap sl <C-w>l
+
 " サイズ変更
 nmap - <C-w>-
 nmap + <C-w>+
